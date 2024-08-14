@@ -11,7 +11,7 @@ const server = http.createServer((req, res) => {
     const filePath = path.join(__dirname, 'comments.html');
     fs.readFile(filePath, (err, data) => {
         if (err) {
-            res.statusCode = 500;
+            res.statusCode = 502;
             res.end('Internal Server Error');
         } else {
             res.end(data);
